@@ -36,11 +36,11 @@ const SpotlightCard = ({ children, className = "" }: SpotlightCardProps) => {
           background: `radial-gradient(400px circle at ${pos.x}px ${pos.y}px, hsl(0 0% 100% / 0.12), transparent 60%)`,
         }}
       />
-      {/* Inner content with border */}
-      <div className="absolute inset-px rounded-[calc(1rem-1px)] bg-[hsl(0_0%_2%)] pointer-events-none" />
+      {/* Inner content with border — theme-aware */}
+      <div className="absolute inset-px rounded-[calc(1rem-1px)] bg-background pointer-events-none" />
       <div className="relative z-10 h-full">{children}</div>
       {/* Base border */}
-      <div className="absolute inset-0 rounded-2xl border border-[hsl(0_0%_100%/0.06)] pointer-events-none" />
+      <div className="absolute inset-0 rounded-2xl border border-[hsl(var(--glass-border))] pointer-events-none" />
     </motion.div>
   );
 };

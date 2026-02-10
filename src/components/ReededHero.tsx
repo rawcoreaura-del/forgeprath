@@ -34,7 +34,7 @@ const ReededHero = () => (
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, type: "spring", stiffness: 100, damping: 20 }}
-        className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-heading font-bold uppercase leading-[0.9] tracking-tight text-gradient mb-8"
+        className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-heading font-black uppercase leading-[0.9] tracking-tight text-gradient mb-8"
       >
         Sculpt
         <br />

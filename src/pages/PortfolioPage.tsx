@@ -27,7 +27,7 @@ const PortfolioPage = () => {
         <ScrollReveal>
           <div className="text-center mb-16 px-6">
             <p className="mono-label mb-4">The Proof</p>
-            <h2 className="text-5xl md:text-7xl font-heading font-bold uppercase text-gradient">
+            <h2 className="text-5xl md:text-7xl font-heading font-black uppercase text-gradient">
               Real Transformations
             </h2>
           </div>

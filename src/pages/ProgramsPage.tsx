@@ -81,7 +81,7 @@ const ProgramsPage = () => {
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <p className="mono-label text-center mb-4">The Method</p>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold uppercase text-center text-gradient mb-20">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-black uppercase text-center text-gradient mb-20">
               Select Your
               <br />
               Protocol

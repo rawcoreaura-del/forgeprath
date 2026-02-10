@@ -60,7 +60,7 @@ const HorizontalPrograms = () => {
         <ScrollReveal>
           <div className="text-center mb-16">
             <p className="mono-label mb-4">The Method</p>
-            <h2 className="text-5xl md:text-7xl font-heading font-bold uppercase text-gradient">
+            <h2 className="text-5xl md:text-7xl font-heading font-black uppercase text-gradient">
               Select Your Protocol
             </h2>
           </div>
@@ -87,7 +87,7 @@ const HorizontalPrograms = () => {
               <motion.div
                 whileHover={{ scale: 1.03 }}
                 transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                className="glass glow-border min-w-[320px] w-[340px] flex-shrink-0 snap-center flex flex-col p-6 md:p-8 group"
+                className="glass glow-border min-w-[320px] w-[340px] flex-shrink-0 snap-center flex flex-col p-6 md:p-8 group hover:scale-[1.02]"
               >
                 <span className="mono-label mb-4">{p.tag}</span>
                 <h3 className="font-heading text-2xl uppercase tracking-wide mb-2">{p.name}</h3>

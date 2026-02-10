@@ -1,5 +1,5 @@
-import { User } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
+import BeforeAfterSlider from "./BeforeAfterSlider";
 
 const results = [
   { name: "Arjun K.", quote: "Lost 18kg in 14 weeks. Best shape of my life.", stat: "-18kg" },
@@ -17,22 +17,20 @@ const ResultsSection = () => (
         <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground text-center mb-3">
           Proof Over Promises
         </p>
-        <h2 className="text-4xl md:text-5xl font-heading font-bold uppercase text-center text-gradient mb-16">
+        <h2 className="text-4xl md:text-6xl font-heading font-black uppercase text-center text-gradient mb-16">
           Real Results
         </h2>
       </ScrollReveal>
 
-      <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+      {/* Masonry grid */}
+      <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 [&>*]:mb-4">
         {results.map((r, i) => (
-          <ScrollReveal key={r.name} delay={i * 0.1}>
-            <div className="glass glow-border p-6 break-inside-avoid group hover:bg-[hsl(var(--glass-hover))] transition-all duration-500">
-              {/* Placeholder for before/after image */}
-              <div className="aspect-[4/3] rounded-xl bg-[hsl(var(--muted))] flex items-center justify-center mb-4">
-                <User size={40} className="text-muted-foreground/30" />
-              </div>
-              <p className="font-heading text-2xl font-bold mb-2">{r.stat}</p>
-              <p className="text-sm text-muted-foreground italic mb-3">"{r.quote}"</p>
-              <p className="text-xs uppercase tracking-wider text-muted-foreground">— {r.name}</p>
+          <ScrollReveal key={r.name} delay={i * 0.08}>
+            <div className="glass glow-border p-4 break-inside-avoid group hover:scale-[1.02] transition-transform duration-400">
+              <BeforeAfterSlider className="mb-4" />
+              <p className="font-heading text-3xl font-black mb-1">{r.stat}</p>
+              <p className="text-sm text-muted-foreground italic mb-2">"{r.quote}"</p>
+              <p className="mono-label">— {r.name}</p>
             </div>
           </ScrollReveal>
         ))}

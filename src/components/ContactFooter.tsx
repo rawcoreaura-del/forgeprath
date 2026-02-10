@@ -8,7 +8,7 @@ const ContactFooter = () => (
         <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-3">
           Let's Work Together
         </p>
-        <h2 className="text-4xl md:text-6xl font-heading font-bold uppercase text-gradient mb-6">
+        <h2 className="text-4xl md:text-6xl font-heading font-black uppercase text-gradient mb-6">
           Book a Consultation
         </h2>
         <p className="text-muted-foreground max-w-lg mx-auto mb-10">
