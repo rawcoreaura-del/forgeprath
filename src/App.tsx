@@ -15,6 +15,7 @@ const ProgramsPage = lazy(() => import("@/pages/ProgramsPage"));
 const ResultsPage = lazy(() => import("@/pages/ResultsPage"));
 const LifestylePage = lazy(() => import("@/pages/LifestylePage"));
 const ContactPage = lazy(() => import("@/pages/ContactPage"));
+const PortfolioPage = lazy(() => import("@/pages/PortfolioPage"));
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const AnimatedRoutes = () => {
         <Route path="/results" element={<Suspense><ResultsPage /></Suspense>} />
         <Route path="/social" element={<Suspense><LifestylePage /></Suspense>} />
         <Route path="/contact" element={<Suspense><ContactPage /></Suspense>} />
+        <Route path="/portfolio" element={<Suspense><PortfolioPage /></Suspense>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
