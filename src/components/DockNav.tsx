@@ -1,4 +1,4 @@
-import { Home, Dumbbell, BarChart3, User, Mail } from "lucide-react";
+import { Home, Dumbbell, BarChart3, Camera, Mail } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { motion } from "framer-motion";
 
@@ -6,7 +6,7 @@ const links = [
   { to: "/", icon: Home, label: "Home" },
   { to: "/programs", icon: Dumbbell, label: "Programs" },
   { to: "/results", icon: BarChart3, label: "Results" },
-  { to: "/about", icon: User, label: "About" },
+  { to: "/social", icon: Camera, label: "Lifestyle" },
   { to: "/contact", icon: Mail, label: "Contact" },
 ];
 
@@ -14,7 +14,7 @@ const DockNav = () => (
   <motion.nav
     initial={{ y: 100, opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
-    transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
+    transition={{ delay: 0.5, type: "spring", stiffness: 100, damping: 20 }}
     className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 glass glow-sm px-3 py-2 rounded-2xl flex items-center gap-1"
   >
     {links.map(({ to, icon: Icon, label }) => (

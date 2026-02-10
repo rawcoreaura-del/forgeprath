@@ -72,14 +72,14 @@ const HomePage = () => {
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.7 }}
+            transition={{ delay: 0.5, type: "spring", stiffness: 100, damping: 20 }}
             className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-heading font-bold uppercase leading-[0.9] tracking-tight text-gradient mb-8"
           >
-            Build Your
+            Define
             <br />
-            Dream
+            Your
             <br />
-            Physique
+            Existence
           </motion.h1>
 
           <motion.p
@@ -94,10 +94,10 @@ const HomePage = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1 }}
+            transition={{ delay: 1, type: "spring", stiffness: 100, damping: 20 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Link to="/programs" className="btn-invert">
+            <Link to="/programs" className="btn-invert" data-magnetic>
               View Plans
             </Link>
             <Link
@@ -138,7 +138,6 @@ const HomePage = () => {
               key={r.name}
               className="glass glow-border w-[340px] flex-shrink-0 overflow-hidden group"
             >
-              {/* Before/After placeholder */}
               <div className="flex">
                 <div className="flex-1 aspect-[3/4] bg-[hsl(0_0%_100%/0.03)] flex items-center justify-center border-r border-[hsl(0_0%_100%/0.06)]">
                   <div className="text-center">
@@ -153,7 +152,6 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-              {/* Info pane */}
               <div className="p-5 border-t border-[hsl(0_0%_100%/0.06)]">
                 <div className="flex items-baseline justify-between mb-2">
                   <p className="font-heading text-lg uppercase">{r.name}</p>

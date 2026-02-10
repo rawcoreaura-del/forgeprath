@@ -123,9 +123,14 @@ const CheckoutModal = ({ open, onClose, planName, price }: CheckoutModalProps) =
                   className="hidden"
                 />
 
-                <button className="w-full bg-foreground text-background py-3.5 rounded-xl font-semibold uppercase tracking-wider hover:scale-[1.02] active:scale-[0.98] transition-transform duration-200">
-                  Confirm Order
-                </button>
+                <a
+                  href={`https://wa.me/919999999999?text=${encodeURIComponent(`Hi, I've made a UPI payment for the ${planName} plan (${price}). Attaching screenshot.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center bg-foreground text-background py-3.5 rounded-xl font-semibold uppercase tracking-wider hover:scale-[1.02] active:scale-[0.98] transition-transform duration-200"
+                >
+                  Confirm Order via WhatsApp
+                </a>
               </div>
             )}
           </motion.div>
