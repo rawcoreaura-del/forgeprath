@@ -274,6 +274,27 @@
     );
   }
 
+  /* ——— REEDED GLASS SIDEBAR (Hero) ——— */
+  .reeded-sidebar {
+    background: hsl(0 0% 100% / 0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-left: 1px solid hsl(0 0% 100% / 0.08);
+  }
+  .reeded-sidebar::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      hsl(0 0% 100% / 0.04) 3px,
+      hsl(0 0% 100% / 0.04) 6px
+    );
+  }
+
   /* ——— GRADIENT ORBS (light theme depth) ——— */
   .gradient-orbs {
     position: fixed;
