@@ -29,25 +29,25 @@ const ResultsPage = () => (
             {results.map((r) => (
               <div key={r.name} className="glass glow-border w-[320px] flex-shrink-0 overflow-hidden group">
                 <div className="flex">
-                  <div className="flex-1 aspect-[3/4] bg-[hsl(0_0%_100%/0.03)] flex items-center justify-center border-r border-[hsl(0_0%_100%/0.06)]">
+                  <div className="flex-1 aspect-[3/4] bg-[hsl(var(--muted))] flex items-center justify-center border-r border-[hsl(var(--border))]">
                     <div className="text-center">
-                      <User size={28} className="mx-auto text-[hsl(0_0%_100%/0.15)] mb-1" />
+                      <User size={28} className="mx-auto text-muted-foreground/30 mb-1" />
                       <span className="mono-label">Before</span>
                     </div>
                   </div>
-                  <div className="flex-1 aspect-[3/4] bg-[hsl(0_0%_100%/0.03)] flex items-center justify-center">
+                  <div className="flex-1 aspect-[3/4] bg-[hsl(var(--muted))] flex items-center justify-center">
                     <div className="text-center">
-                      <User size={28} className="mx-auto text-[hsl(0_0%_100%/0.15)] mb-1" />
+                      <User size={28} className="mx-auto text-muted-foreground/30 mb-1" />
                       <span className="mono-label">After</span>
                     </div>
                   </div>
                 </div>
-                <div className="p-5 border-t border-[hsl(0_0%_100%/0.06)]">
+                <div className="p-5 border-t border-[hsl(var(--border))]">
                   <div className="flex items-baseline justify-between mb-2">
                     <p className="font-heading text-lg uppercase">{r.name}</p>
                     <p className="font-heading text-xl font-bold">{r.stat}</p>
                   </div>
-                  <p className="text-sm text-[hsl(0_0%_100%/0.5)]">"{r.quote}"</p>
+                  <p className="text-sm text-muted-foreground">"{r.quote}"</p>
                 </div>
               </div>
             ))}
@@ -58,12 +58,12 @@ const ResultsPage = () => (
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {results.map((r, i) => (
             <ScrollReveal key={r.name} delay={i * 0.1}>
-              <div className="glass glow-border p-6 group hover:bg-[hsl(0_0%_100%/0.08)] transition-all duration-500">
-                <div className="aspect-[4/3] rounded-xl bg-[hsl(0_0%_100%/0.03)] flex items-center justify-center mb-4">
-                  <User size={40} className="text-[hsl(0_0%_100%/0.12)]" />
+              <div className="glass glow-border p-6 group hover:bg-[hsl(var(--glass-hover))] transition-all duration-500">
+                <div className="aspect-[4/3] rounded-xl bg-[hsl(var(--muted))] flex items-center justify-center mb-4">
+                  <User size={40} className="text-muted-foreground/30" />
                 </div>
                 <p className="font-heading text-3xl font-bold mb-2">{r.stat}</p>
-                <p className="text-sm text-[hsl(0_0%_100%/0.5)] italic mb-3">"{r.quote}"</p>
+                <p className="text-sm text-muted-foreground italic mb-3">"{r.quote}"</p>
                 <p className="mono-label">— {r.name}</p>
               </div>
             </ScrollReveal>

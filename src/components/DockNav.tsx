@@ -6,7 +6,7 @@ const links = [
   { to: "/", icon: Home, label: "Home" },
   { to: "/programs", icon: Dumbbell, label: "Programs" },
   { to: "/results", icon: BarChart3, label: "Results" },
-  { to: "/social", icon: Camera, label: "Lifestyle" },
+  { to: "/social", icon: Camera, label: "Social" },
   { to: "/contact", icon: Mail, label: "Contact" },
 ];
 
@@ -22,10 +22,10 @@ const DockNav = () => (
         key={to}
         to={to}
         end={to === "/"}
-        className="relative flex flex-col items-center gap-0.5 px-4 py-2 rounded-xl transition-all duration-300 hover:bg-[hsl(0_0%_100%/0.08)] group"
-        activeClassName="bg-[hsl(0_0%_100%/0.10)]"
+        className="relative flex flex-col items-center gap-0.5 px-4 py-2 rounded-xl transition-all duration-300 hover:bg-[hsl(var(--glass-hover))] hover:scale-110 group"
+        activeClassName="bg-[hsl(var(--glass-hover))]"
       >
-        <Icon size={20} className="text-[hsl(0_0%_100%/0.5)] group-hover:text-foreground transition-colors" />
+        <Icon size={20} className="text-muted-foreground group-hover:text-foreground transition-colors" />
         <span className="mono-label text-[0.55rem]">{label}</span>
       </NavLink>
     ))}

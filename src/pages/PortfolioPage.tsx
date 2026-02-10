@@ -1,11 +1,8 @@
-import { useState, useCallback } from "react";
 import ReededHero from "@/components/ReededHero";
 import HorizontalPrograms from "@/components/HorizontalPrograms";
 import ResultsSection from "@/components/ResultsSection";
 import ElfsightInstagram from "@/components/ElfsightInstagram";
 import ContactFooter from "@/components/ContactFooter";
-import PortfolioDock from "@/components/PortfolioDock";
-import ThemeToggle from "@/components/ThemeToggle";
 import Marquee from "@/components/Marquee";
 import ScrollReveal from "@/components/ScrollReveal";
 import { User } from "lucide-react";
@@ -20,76 +17,63 @@ const results = [
 ];
 
 const PortfolioPage = () => {
-  const [isDark, setIsDark] = useState(false);
-
-  const toggleTheme = useCallback(() => {
-    setIsDark((prev) => !prev);
-  }, []);
-
   return (
-    <div className={isDark ? "" : "light-theme"}>
-      <div className="bg-background min-h-screen noise-bg relative transition-colors duration-500">
-        <ThemeToggle isDark={isDark} onToggle={toggleTheme} />
+    <>
+      {/* Hero with Reeded Glass */}
+      <ReededHero />
 
-        {/* Hero with Reeded Glass */}
-        <ReededHero />
+      {/* Transformation Marquee */}
+      <section className="py-24 md:py-32">
+        <ScrollReveal>
+          <div className="text-center mb-16 px-6">
+            <p className="mono-label mb-4">The Proof</p>
+            <h2 className="text-5xl md:text-7xl font-heading font-bold uppercase text-gradient">
+              Real Transformations
+            </h2>
+          </div>
+        </ScrollReveal>
 
-        {/* Transformation Marquee */}
-        <section className="py-24 md:py-32">
-          <ScrollReveal>
-            <div className="text-center mb-16 px-6">
-              <p className="mono-label mb-4">The Proof</p>
-              <h2 className="text-5xl md:text-7xl font-heading font-bold uppercase text-gradient">
-                Real Transformations
-              </h2>
-            </div>
-          </ScrollReveal>
-
-          <Marquee speed={40}>
-            {results.map((r) => (
-              <div key={r.name} className="glass glow-border w-[340px] flex-shrink-0 overflow-hidden group">
-                <div className="flex">
-                  <div className="flex-1 aspect-[3/4] bg-[hsl(var(--muted))] flex items-center justify-center border-r border-[hsl(var(--border))]">
-                    <div className="text-center">
-                      <User size={32} className="mx-auto text-muted-foreground/30 mb-1" />
-                      <span className="mono-label">Before</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 aspect-[3/4] bg-[hsl(var(--muted))] flex items-center justify-center">
-                    <div className="text-center">
-                      <User size={32} className="mx-auto text-muted-foreground/30 mb-1" />
-                      <span className="mono-label">After</span>
-                    </div>
+        <Marquee speed={40}>
+          {results.map((r) => (
+            <div key={r.name} className="glass glow-border w-[340px] flex-shrink-0 overflow-hidden group">
+              <div className="flex">
+                <div className="flex-1 aspect-[3/4] bg-[hsl(var(--muted))] flex items-center justify-center border-r border-[hsl(var(--border))]">
+                  <div className="text-center">
+                    <User size={32} className="mx-auto text-muted-foreground/30 mb-1" />
+                    <span className="mono-label">Before</span>
                   </div>
                 </div>
-                <div className="p-5 border-t border-[hsl(var(--border))]">
-                  <div className="flex items-baseline justify-between mb-2">
-                    <p className="font-heading text-lg uppercase">{r.name}</p>
-                    <p className="font-heading text-xl font-bold">{r.stat}</p>
+                <div className="flex-1 aspect-[3/4] bg-[hsl(var(--muted))] flex items-center justify-center">
+                  <div className="text-center">
+                    <User size={32} className="mx-auto text-muted-foreground/30 mb-1" />
+                    <span className="mono-label">After</span>
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">"{r.quote}"</p>
                 </div>
               </div>
-            ))}
-          </Marquee>
-        </section>
+              <div className="p-5 border-t border-[hsl(var(--border))]">
+                <div className="flex items-baseline justify-between mb-2">
+                  <p className="font-heading text-lg uppercase">{r.name}</p>
+                  <p className="font-heading text-xl font-bold">{r.stat}</p>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">"{r.quote}"</p>
+              </div>
+            </div>
+          ))}
+        </Marquee>
+      </section>
 
-        {/* Programs */}
-        <HorizontalPrograms />
+      {/* Programs */}
+      <HorizontalPrograms />
 
-        {/* Results Gallery */}
-        <ResultsSection />
+      {/* Results Gallery */}
+      <ResultsSection />
 
-        {/* Instagram Embed */}
-        <ElfsightInstagram />
+      {/* Instagram Embed */}
+      <ElfsightInstagram />
 
-        {/* Contact & Footer */}
-        <ContactFooter />
-
-        {/* Dock Nav */}
-        <PortfolioDock />
-      </div>
-    </div>
+      {/* Contact & Footer */}
+      <ContactFooter />
+    </>
   );
 };
 

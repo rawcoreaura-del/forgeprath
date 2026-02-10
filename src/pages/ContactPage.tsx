@@ -13,7 +13,7 @@ const ContactPage = () => (
             <br />
             Consultation
           </h1>
-          <p className="text-[hsl(0_0%_100%/0.5)] max-w-md mx-auto mb-12 text-lg">
+          <p className="text-muted-foreground max-w-md mx-auto mb-12 text-lg">
             Ready to start your transformation? Schedule a free discovery call and let's build your roadmap.
           </p>
 
@@ -40,7 +40,7 @@ const ContactPage = () => (
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="glass w-14 h-14 rounded-full flex items-center justify-center text-[hsl(0_0%_100%/0.4)] hover:text-foreground hover:bg-[hsl(0_0%_100%/0.1)] transition-all duration-300"
+                className="glass w-14 h-14 rounded-full flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-[hsl(var(--glass-hover))] transition-all duration-300"
               >
                 <Icon size={22} />
               </a>
@@ -48,7 +48,7 @@ const ContactPage = () => (
           </div>
         </ScrollReveal>
 
-        <div className="mt-24 pt-8 border-t border-[hsl(0_0%_100%/0.08)]">
+        <div className="mt-24 pt-8 border-t border-[hsl(var(--border))]">
           <p className="mono-label">© 2026 FORGE Fitness. All rights reserved.</p>
         </div>
       </div>

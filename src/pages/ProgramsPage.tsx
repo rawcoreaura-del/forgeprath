@@ -103,11 +103,11 @@ const ProgramsPage = () => {
                       {p.features.map((f) => (
                         <li
                           key={f}
-                          className="flex items-start gap-3 text-sm text-[hsl(0_0%_100%/0.55)]"
+                          className="flex items-start gap-3 text-sm text-muted-foreground"
                         >
                           <Check
                             size={14}
-                            className="mt-0.5 text-[hsl(0_0%_100%/0.3)] flex-shrink-0"
+                            className="mt-0.5 text-muted-foreground/50 flex-shrink-0"
                           />
                           {f}
                         </li>
