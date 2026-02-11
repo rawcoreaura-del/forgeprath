@@ -2,6 +2,7 @@ import { useState, useCallback } from "react";
 import { Outlet } from "react-router-dom";
 import ThemeToggle from "@/components/ThemeToggle";
 import DockNav from "@/components/DockNav";
+import GlowCursor from "@/components/GlowCursor";
 
 const Layout = () => {
   const [isDark, setIsDark] = useState(false);
@@ -19,6 +20,7 @@ const Layout = () => {
           <div className="orb orb-2" />
           <div className="orb orb-3" />
         </div>
+        <GlowCursor />
         <ThemeToggle isDark={isDark} onToggle={toggleTheme} />
         <div className="relative z-[2]">
           <Outlet />

@@ -1,6 +1,7 @@
 import { User } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
+import { motion } from "framer-motion";
 
 const AboutPage = () => (
   <PageTransition>
@@ -42,9 +43,18 @@ const AboutPage = () => (
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <div className="glass glow-border aspect-[3/4] rounded-2xl flex items-center justify-center overflow-hidden">
-              <User size={80} className="text-muted-foreground/20" />
-            </div>
+            <motion.div
+              className="glass glow-border aspect-[3/4] rounded-2xl flex items-center justify-center overflow-hidden group cursor-pointer"
+              whileHover={{
+                rotateY: 5,
+                rotateX: -5,
+                scale: 1.02,
+              }}
+              transition={{ type: "spring", stiffness: 200, damping: 20 }}
+              style={{ perspective: 800, transformStyle: "preserve-3d" }}
+            >
+              <User size={80} className="text-muted-foreground/20 group-hover:scale-110 transition-transform duration-500" />
+            </motion.div>
           </ScrollReveal>
         </div>
       </div>
