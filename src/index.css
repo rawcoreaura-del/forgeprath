@@ -252,14 +252,14 @@
     position: absolute;
     inset: 0;
     z-index: 1;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     background: repeating-linear-gradient(
       90deg,
-      transparent,
+      rgba(255,255,255,0.03) 0px,
+      rgba(255,255,255,0.03) 2px,
       transparent 2px,
-      hsl(0 0% 100% / 0.08) 2px,
-      hsl(0 0% 100% / 0.08) 4px
+      transparent 8px
     );
     pointer-events: none;
   }
@@ -267,11 +267,19 @@
   .light-theme .reeded-glass::before {
     background: repeating-linear-gradient(
       90deg,
-      transparent,
+      rgba(0,0,0,0.03) 0px,
+      rgba(0,0,0,0.03) 2px,
       transparent 2px,
-      hsl(0 0% 100% / 0.25) 2px,
-      hsl(0 0% 100% / 0.25) 4px
+      transparent 8px
     );
+  }
+
+  /* ——— HERO OUTLINE TEXT ——— */
+  .hero-text-outline {
+    -webkit-text-stroke: 2px hsl(0 0% 100% / 0.8);
+  }
+  .light-theme .hero-text-outline {
+    -webkit-text-stroke: 2px hsl(0 0% 0% / 0.8);
   }
 
   /* ——— GRADIENT ORBS (light theme depth) ——— */
