@@ -8,6 +8,7 @@ import { lazy, Suspense, useState, useCallback } from "react";
 import MagneticCursor from "@/components/MagneticCursor";
 import Preloader from "@/components/Preloader";
 import Layout from "@/components/Layout";
+import LenisProvider from "@/components/LenisProvider";
 import PortfolioPage from "@/pages/PortfolioPage";
 import NotFound from "@/pages/NotFound";
 
@@ -47,8 +48,10 @@ const App = () => {
         <Sonner />
         {!loaded && <Preloader onComplete={handlePreloaderComplete} />}
         <BrowserRouter>
-          <MagneticCursor />
-          <AnimatedRoutes />
+          <LenisProvider>
+            <MagneticCursor />
+            <AnimatedRoutes />
+          </LenisProvider>
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>

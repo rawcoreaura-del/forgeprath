@@ -3,6 +3,7 @@ import BenefitsGrid from "@/components/BenefitsGrid";
 import HorizontalPrograms from "@/components/HorizontalPrograms";
 import ResultsSection from "@/components/ResultsSection";
 import FAQSection from "@/components/FAQSection";
+import InstagramGrid from "@/components/InstagramGrid";
 import ContactFooter from "@/components/ContactFooter";
 import Marquee from "@/components/Marquee";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -21,8 +22,6 @@ const PortfolioPage = () => {
   return (
     <>
       <ReededHero />
-
-      {/* Benefits */}
       <BenefitsGrid />
 
       {/* Transformation Marquee */}
@@ -65,16 +64,10 @@ const PortfolioPage = () => {
         </Marquee>
       </section>
 
-      {/* Programs */}
       <HorizontalPrograms />
-
-      {/* Results Gallery */}
       <ResultsSection />
-
-      {/* FAQ */}
       <FAQSection />
-
-      {/* Contact & Footer */}
+      <InstagramGrid />
       <ContactFooter />
     </>
   );
