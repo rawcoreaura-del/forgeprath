@@ -1,7 +1,8 @@
 import ReededHero from "@/components/ReededHero";
+import BenefitsGrid from "@/components/BenefitsGrid";
 import HorizontalPrograms from "@/components/HorizontalPrograms";
 import ResultsSection from "@/components/ResultsSection";
-import ElfsightInstagram from "@/components/ElfsightInstagram";
+import FAQSection from "@/components/FAQSection";
 import ContactFooter from "@/components/ContactFooter";
 import Marquee from "@/components/Marquee";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -19,8 +20,10 @@ const results = [
 const PortfolioPage = () => {
   return (
     <>
-      {/* Hero with Reeded Glass */}
       <ReededHero />
+
+      {/* Benefits */}
+      <BenefitsGrid />
 
       {/* Transformation Marquee */}
       <section className="py-24 md:py-32">
@@ -68,8 +71,8 @@ const PortfolioPage = () => {
       {/* Results Gallery */}
       <ResultsSection />
 
-      {/* Instagram Embed */}
-      <ElfsightInstagram />
+      {/* FAQ */}
+      <FAQSection />
 
       {/* Contact & Footer */}
       <ContactFooter />
