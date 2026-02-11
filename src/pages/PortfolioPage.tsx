@@ -3,7 +3,7 @@ import BenefitsGrid from "@/components/BenefitsGrid";
 import HorizontalPrograms from "@/components/HorizontalPrograms";
 import ResultsSection from "@/components/ResultsSection";
 import FAQSection from "@/components/FAQSection";
-import InstagramGrid from "@/components/InstagramGrid";
+import InstagramFeed from "@/components/InstagramFeed";
 import ContactFooter from "@/components/ContactFooter";
 import Marquee from "@/components/Marquee";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -67,7 +67,7 @@ const PortfolioPage = () => {
       <HorizontalPrograms />
       <ResultsSection />
       <FAQSection />
-      <InstagramGrid />
+      <InstagramFeed />
       <ContactFooter />
     </>
   );

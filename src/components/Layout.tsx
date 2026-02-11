@@ -5,14 +5,14 @@ import DockNav from "@/components/DockNav";
 import GlowCursor from "@/components/GlowCursor";
 
 const Layout = () => {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
 
   const toggleTheme = useCallback(() => {
     setIsDark((prev) => !prev);
   }, []);
 
   return (
-    <div className={isDark ? "" : "light-theme"}>
+    <div className={isDark ? "" : "light-theme"} style={{ colorScheme: isDark ? "dark" : "light" }}>
       <div className="bg-background min-h-screen noise-bg relative transition-colors duration-500">
         {/* Gradient orbs for light theme depth */}
         <div className="gradient-orbs" aria-hidden="true">

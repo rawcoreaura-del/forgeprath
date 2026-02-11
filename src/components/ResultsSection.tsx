@@ -1,5 +1,5 @@
 import ScrollReveal from "./ScrollReveal";
-import BeforeAfterSlider from "./BeforeAfterSlider";
+import { User } from "lucide-react";
 
 const results = [
   { name: "Arjun K.", quote: "Lost 18kg in 14 weeks. Best shape of my life.", stat: "-18kg" },
@@ -22,12 +22,21 @@ const ResultsSection = () => (
         </h2>
       </ScrollReveal>
 
-      {/* Masonry grid */}
-      <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 [&>*]:mb-4">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {results.map((r, i) => (
           <ScrollReveal key={r.name} delay={i * 0.08}>
-            <div className="glass glow-border p-4 break-inside-avoid group hover:scale-[1.02] transition-transform duration-400">
-              <BeforeAfterSlider className="mb-4" />
+            <div className="glass glow-border p-4 group hover:scale-105 hover:shadow-[0_0_40px_hsl(0_0%_100%/0.15)] transition-all duration-500 relative overflow-hidden rounded-2xl">
+              {/* Main "After" image placeholder */}
+              <div className="aspect-[3/4] bg-[hsl(var(--muted))] rounded-xl flex items-center justify-center mb-4 relative">
+                <User size={48} className="text-muted-foreground/20" />
+                {/* PiP "Before" inset */}
+                <div className="absolute bottom-2 left-2 w-16 h-20 rounded-lg bg-[hsl(var(--muted))] border-2 border-[hsl(var(--glass-border))] flex items-center justify-center shadow-lg">
+                  <div className="text-center">
+                    <User size={14} className="mx-auto text-muted-foreground/30" />
+                    <span className="text-[8px] uppercase tracking-wider text-muted-foreground/40">Before</span>
+                  </div>
+                </div>
+              </div>
               <p className="font-heading text-3xl font-black mb-1">{r.stat}</p>
               <p className="text-sm text-muted-foreground italic mb-2">"{r.quote}"</p>
               <p className="mono-label">— {r.name}</p>

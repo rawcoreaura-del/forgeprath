@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
+import HeroParticles from "./HeroParticles";
 
 const ReededHero = () => (
   <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -18,6 +19,9 @@ const ReededHero = () => (
 
     {/* Gradient fade to background */}
     <div className="absolute inset-0 z-[2] bg-gradient-to-b from-background/30 via-transparent to-background" />
+
+    {/* Floating dust particles */}
+    <HeroParticles />
 
     {/* Content */}
     <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">

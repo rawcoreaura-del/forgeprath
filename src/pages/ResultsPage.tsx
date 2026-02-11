@@ -28,17 +28,13 @@ const ResultsPage = () => (
           <Marquee speed={35}>
             {results.map((r) => (
               <div key={r.name} className="glass glow-border w-[320px] flex-shrink-0 overflow-hidden group">
-                <div className="flex">
-                  <div className="flex-1 aspect-[3/4] bg-[hsl(var(--muted))] flex items-center justify-center border-r border-[hsl(var(--border))]">
+                <div className="aspect-[3/4] bg-[hsl(var(--muted))] flex items-center justify-center relative">
+                  <User size={40} className="text-muted-foreground/20" />
+                  {/* PiP Before inset */}
+                  <div className="absolute bottom-2 left-2 w-14 h-18 rounded-lg bg-[hsl(var(--muted))] border-2 border-[hsl(var(--glass-border))] flex items-center justify-center shadow-lg">
                     <div className="text-center">
-                      <User size={28} className="mx-auto text-muted-foreground/30 mb-1" />
-                      <span className="mono-label">Before</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 aspect-[3/4] bg-[hsl(var(--muted))] flex items-center justify-center">
-                    <div className="text-center">
-                      <User size={28} className="mx-auto text-muted-foreground/30 mb-1" />
-                      <span className="mono-label">After</span>
+                      <User size={12} className="mx-auto text-muted-foreground/30" />
+                      <span className="text-[7px] uppercase tracking-wider text-muted-foreground/40">Before</span>
                     </div>
                   </div>
                 </div>
@@ -58,9 +54,15 @@ const ResultsPage = () => (
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {results.map((r, i) => (
             <ScrollReveal key={r.name} delay={i * 0.1}>
-              <div className="glass glow-border p-6 group hover:bg-[hsl(var(--glass-hover))] transition-all duration-500">
-                <div className="aspect-[4/3] rounded-xl bg-[hsl(var(--muted))] flex items-center justify-center mb-4">
-                  <User size={40} className="text-muted-foreground/30" />
+              <div className="glass glow-border p-4 group hover:scale-105 hover:shadow-[0_0_40px_hsl(0_0%_100%/0.15)] transition-all duration-500 relative overflow-hidden rounded-2xl">
+                <div className="aspect-[3/4] rounded-xl bg-[hsl(var(--muted))] flex items-center justify-center mb-4 relative">
+                  <User size={48} className="text-muted-foreground/20" />
+                  <div className="absolute bottom-2 left-2 w-16 h-20 rounded-lg bg-[hsl(var(--muted))] border-2 border-[hsl(var(--glass-border))] flex items-center justify-center shadow-lg">
+                    <div className="text-center">
+                      <User size={14} className="mx-auto text-muted-foreground/30" />
+                      <span className="text-[8px] uppercase tracking-wider text-muted-foreground/40">Before</span>
+                    </div>
+                  </div>
                 </div>
                 <p className="font-heading text-3xl font-bold mb-2">{r.stat}</p>
                 <p className="text-sm text-muted-foreground italic mb-3">"{r.quote}"</p>
