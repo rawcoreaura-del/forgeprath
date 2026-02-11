@@ -49,7 +49,7 @@ const ReededHero = () => (
         transition={{ delay: 0.7, type: "spring", stiffness: 100, damping: 20 }}
         className="text-lg md:text-xl text-muted-foreground max-w-md mx-auto mb-12"
       >
-        Science-based coaching without the guesswork.
+        Make sustainability a pattern. Join the elite community transforming their physiques with science-based coaching.
       </motion.p>
 
       <motion.div

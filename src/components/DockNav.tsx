@@ -1,4 +1,4 @@
-import { Home, Dumbbell, BarChart3, Camera, Mail } from "lucide-react";
+import { Home, Dumbbell, BarChart3, UserCircle, Mail } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { motion } from "framer-motion";
 
@@ -6,7 +6,7 @@ const links = [
   { to: "/", icon: Home, label: "Home" },
   { to: "/programs", icon: Dumbbell, label: "Programs" },
   { to: "/results", icon: BarChart3, label: "Results" },
-  { to: "/social", icon: Camera, label: "Social" },
+  { to: "/about", icon: UserCircle, label: "About" },
   { to: "/contact", icon: Mail, label: "Contact" },
 ];
 

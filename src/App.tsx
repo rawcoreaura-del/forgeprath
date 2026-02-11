@@ -13,7 +13,7 @@ import NotFound from "@/pages/NotFound";
 
 const ProgramsPage = lazy(() => import("@/pages/ProgramsPage"));
 const ResultsPage = lazy(() => import("@/pages/ResultsPage"));
-const LifestylePage = lazy(() => import("@/pages/LifestylePage"));
+const AboutPage = lazy(() => import("@/pages/AboutPage"));
 const ContactPage = lazy(() => import("@/pages/ContactPage"));
 
 const queryClient = new QueryClient();
@@ -27,7 +27,7 @@ const AnimatedRoutes = () => {
           <Route path="/" element={<PortfolioPage />} />
           <Route path="/programs" element={<Suspense><ProgramsPage /></Suspense>} />
           <Route path="/results" element={<Suspense><ResultsPage /></Suspense>} />
-          <Route path="/social" element={<Suspense><LifestylePage /></Suspense>} />
+          <Route path="/about" element={<Suspense><AboutPage /></Suspense>} />
           <Route path="/contact" element={<Suspense><ContactPage /></Suspense>} />
         </Route>
         <Route path="*" element={<NotFound />} />

@@ -1,11 +1,11 @@
-import { Home, ShoppingBag, Trophy, Camera, Mail } from "lucide-react";
+import { Home, ShoppingBag, Trophy, UserCircle, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 
 const links = [
   { href: "#home", icon: Home, label: "Home" },
   { href: "#programs", icon: ShoppingBag, label: "Plans" },
   { href: "#results", icon: Trophy, label: "Results" },
-  { href: "#social", icon: Camera, label: "Social" },
+  { href: "#about", icon: UserCircle, label: "About" },
   { href: "#contact", icon: Mail, label: "Contact" },
 ];
 
