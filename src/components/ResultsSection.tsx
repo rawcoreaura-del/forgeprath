@@ -31,7 +31,7 @@ const ResultsSection = () => (
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {results.map((r, i) => (
           <ScrollReveal key={r.name} delay={i * 0.08}>
-            <div className="glass glow-border p-4 group hover:scale-105 hover:shadow-[0_0_40px_hsl(var(--glow))] transition-all duration-500 relative overflow-hidden rounded-2xl">
+            <div className="glass glow-border p-4 group hover:scale-105 hover:shadow-[0_0_40px_hsl(0_0%_100%/0.15)] transition-all duration-500 relative overflow-hidden rounded-2xl">
               <div className="aspect-[3/4] rounded-xl overflow-hidden mb-4 relative">
                 <img src={r.image} alt={r.name} className="w-full h-full object-cover" loading="lazy" />
               </div>
