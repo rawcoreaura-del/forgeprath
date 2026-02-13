@@ -27,12 +27,7 @@ const DockNav = () => {
       initial={{ y: 100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.5, type: "spring", stiffness: 100, damping: 20 }}
-      className="fixed bottom-8 left-1/2 z-50 px-4 py-3 rounded-[2rem] flex items-end gap-1 backdrop-blur-[60px] border border-[hsl(var(--glass-border))]"
-      style={{
-        background: "hsl(var(--glass-bg))",
-        boxShadow: "0 8px 32px hsl(0 0% 0% / 0.15), inset 0 1px 0 0 hsl(0 0% 100% / 0.08)",
-        transform: "translateX(-50%)",
-      }}
+      className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-sm md:w-auto md:max-w-none px-4 py-3 rounded-[2rem] flex items-end justify-center gap-1 backdrop-blur-xl bg-background/80 border border-border"
     >
       {links.map(({ to, icon: Icon, label }, index) => (
         <NavLink
@@ -47,7 +42,7 @@ const DockNav = () => {
             onMouseLeave={() => setHoveredIndex(null)}
             animate={{ scale: getScale(index) }}
             transition={{ type: "spring", stiffness: 400, damping: 25 }}
-            className="w-11 h-11 rounded-xl flex items-center justify-center hover:bg-[hsl(var(--glass-hover))] transition-colors duration-200 origin-bottom"
+            className="w-11 h-11 rounded-xl flex items-center justify-center hover:bg-accent transition-colors duration-200 origin-bottom"
             aria-label={label}
           >
             <Icon size={20} className="text-muted-foreground group-[.dock-active]:text-foreground transition-colors" />
