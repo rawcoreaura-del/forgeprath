@@ -27,7 +27,7 @@ const DockNav = () => {
       initial={{ y: 100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.5, type: "spring", stiffness: 100, damping: 20 }}
-      className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-sm md:w-auto md:max-w-none px-4 py-3 rounded-[2rem] flex items-end justify-center gap-1 backdrop-blur-xl bg-background/80 border border-border"
+      className="fixed bottom-8 left-1/2 -translate-x-1/2 z-[9999] w-auto max-w-fit px-4 py-3 rounded-full flex items-end justify-center gap-1 backdrop-blur-xl border border-[hsl(var(--glass-border))] bg-[hsl(var(--glass-bg))] shadow-2xl"
     >
       {links.map(({ to, icon: Icon, label }, index) => (
         <NavLink

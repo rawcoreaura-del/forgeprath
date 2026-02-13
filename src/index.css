@@ -282,19 +282,15 @@
     -webkit-text-stroke: 2px hsl(0 0% 0% / 0.8);
   }
 
-  /* ——— GRADIENT ORBS (light theme depth) ——— */
+  /* ——— GRADIENT ORBS (dual-theme atmospheric depth) ——— */
   .gradient-orbs {
     position: fixed;
     inset: 0;
     pointer-events: none;
     z-index: 0;
     overflow: hidden;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
-
-  .light-theme .gradient-orbs {
     opacity: 1;
+    transition: opacity 0.5s ease;
   }
 
   .gradient-orbs .orb {
@@ -303,12 +299,13 @@
     filter: blur(100px);
   }
 
+  /* Dark mode: cyan/purple glow */
   .gradient-orbs .orb-1 {
     width: 600px;
     height: 600px;
     top: -10%;
     right: -5%;
-    background: hsl(0 0% 0% / 0.08);
+    background: hsl(190 80% 50% / 0.15);
     animation: orb-drift-1 25s ease-in-out infinite;
   }
 
@@ -317,7 +314,7 @@
     height: 500px;
     bottom: 10%;
     left: -10%;
-    background: hsl(0 0% 0% / 0.06);
+    background: hsl(270 60% 50% / 0.12);
     animation: orb-drift-2 30s ease-in-out infinite;
   }
 
@@ -326,8 +323,19 @@
     height: 400px;
     top: 40%;
     left: 50%;
-    background: hsl(0 0% 0% / 0.05);
+    background: hsl(210 70% 50% / 0.10);
     animation: orb-drift-3 20s ease-in-out infinite;
+  }
+
+  /* Light mode: dark shadow orbs */
+  .light-theme .gradient-orbs .orb-1 {
+    background: hsl(0 0% 0% / 0.05);
+  }
+  .light-theme .gradient-orbs .orb-2 {
+    background: hsl(0 0% 0% / 0.04);
+  }
+  .light-theme .gradient-orbs .orb-3 {
+    background: hsl(0 0% 0% / 0.03);
   }
 
   @keyframes orb-drift-1 {
