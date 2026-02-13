@@ -308,7 +308,7 @@
     height: 600px;
     top: -10%;
     right: -5%;
-    background: hsl(210 40% 85% / 0.5);
+    background: hsl(0 0% 0% / 0.08);
     animation: orb-drift-1 25s ease-in-out infinite;
   }
 
@@ -317,7 +317,7 @@
     height: 500px;
     bottom: 10%;
     left: -10%;
-    background: hsl(220 30% 90% / 0.4);
+    background: hsl(0 0% 0% / 0.06);
     animation: orb-drift-2 30s ease-in-out infinite;
   }
 
@@ -326,7 +326,7 @@
     height: 400px;
     top: 40%;
     left: 50%;
-    background: hsl(200 50% 88% / 0.3);
+    background: hsl(0 0% 0% / 0.05);
     animation: orb-drift-3 20s ease-in-out infinite;
   }
 

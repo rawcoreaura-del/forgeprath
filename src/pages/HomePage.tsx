@@ -43,7 +43,7 @@ const HomePage = () => {
             top: spotY,
             x: "-50%",
             y: "-50%",
-            background: "radial-gradient(circle, hsl(0 0% 100% / 0.07) 0%, transparent 70%)",
+            background: "radial-gradient(circle, hsl(var(--glow)) 0%, transparent 70%)",
           }}
         />
 
@@ -86,7 +86,7 @@ const HomePage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
-            className="text-lg md:text-xl text-[hsl(0_0%_100%/0.6)] max-w-md mx-auto mb-12"
+            className="text-lg md:text-xl text-muted-foreground max-w-md mx-auto mb-12"
           >
             Science-based coaching without the guesswork.
           </motion.p>
@@ -102,7 +102,7 @@ const HomePage = () => {
             </Link>
             <Link
               to="/results"
-              className="text-sm uppercase tracking-widest text-[hsl(0_0%_100%/0.5)] hover:text-foreground transition-colors underline underline-offset-4 decoration-[hsl(0_0%_100%/0.2)]"
+              className="text-sm uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4 decoration-border"
             >
               Client Results
             </Link>
@@ -117,7 +117,7 @@ const HomePage = () => {
           className="absolute bottom-24 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         >
           <span className="mono-label">Scroll Down</span>
-          <div className="w-px h-8 bg-gradient-to-b from-[hsl(0_0%_100%/0.3)] to-transparent" />
+          <div className="w-px h-8 bg-gradient-to-b from-muted-foreground/30 to-transparent" />
         </motion.div>
       </section>
 
@@ -139,25 +139,25 @@ const HomePage = () => {
               className="glass glow-border w-[340px] flex-shrink-0 overflow-hidden group"
             >
               <div className="flex">
-                <div className="flex-1 aspect-[3/4] bg-[hsl(0_0%_100%/0.03)] flex items-center justify-center border-r border-[hsl(0_0%_100%/0.06)]">
+                <div className="flex-1 aspect-[3/4] bg-accent flex items-center justify-center border-r border-border">
                   <div className="text-center">
-                    <User size={32} className="mx-auto text-[hsl(0_0%_100%/0.15)] mb-1" />
+                    <User size={32} className="mx-auto text-muted-foreground/30 mb-1" />
                     <span className="mono-label">Before</span>
                   </div>
                 </div>
-                <div className="flex-1 aspect-[3/4] bg-[hsl(0_0%_100%/0.03)] flex items-center justify-center">
+                <div className="flex-1 aspect-[3/4] bg-accent flex items-center justify-center">
                   <div className="text-center">
-                    <User size={32} className="mx-auto text-[hsl(0_0%_100%/0.15)] mb-1" />
+                    <User size={32} className="mx-auto text-muted-foreground/30 mb-1" />
                     <span className="mono-label">After</span>
                   </div>
                 </div>
               </div>
-              <div className="p-5 border-t border-[hsl(0_0%_100%/0.06)]">
+              <div className="p-5 border-t border-border">
                 <div className="flex items-baseline justify-between mb-2">
                   <p className="font-heading text-lg uppercase">{r.name}</p>
                   <p className="font-heading text-xl font-bold">{r.stat}</p>
                 </div>
-                <p className="text-sm text-[hsl(0_0%_100%/0.5)] leading-relaxed">"{r.quote}"</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">"{r.quote}"</p>
               </div>
             </div>
           ))}
