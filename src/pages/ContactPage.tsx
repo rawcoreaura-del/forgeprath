@@ -48,7 +48,7 @@ const ContactPage = () => (
           </div>
         </ScrollReveal>
 
-        <div className="mt-24 pt-8 border-t border-[hsl(var(--border))]">
+        <div className="mt-24 pb-24 sm:pb-8 pt-8 border-t border-[hsl(var(--border))]">
           <p className="mono-label">© 2026 FORGE Fitness. All rights reserved.</p>
         </div>
       </div>

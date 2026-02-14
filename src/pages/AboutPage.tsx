@@ -26,17 +26,17 @@ const AboutPage = () => (
               I spent years learning, failing, and refining my methods so you don't have to. Today,
               I help people skip the trial and error and get straight to results.
             </p>
-            <div className="flex gap-10">
+            <div className="flex flex-wrap gap-6 sm:gap-10">
               <div>
-                <p className="text-4xl font-heading font-bold">500+</p>
+                <p className="text-3xl sm:text-4xl font-heading font-bold">500+</p>
                 <p className="mono-label mt-1">Clients Coached</p>
               </div>
               <div>
-                <p className="text-4xl font-heading font-bold">8+</p>
+                <p className="text-3xl sm:text-4xl font-heading font-bold">8+</p>
                 <p className="mono-label mt-1">Years Experience</p>
               </div>
               <div>
-                <p className="text-4xl font-heading font-bold">98%</p>
+                <p className="text-3xl sm:text-4xl font-heading font-bold">98%</p>
                 <p className="mono-label mt-1">Goal Achievement</p>
               </div>
             </div>
