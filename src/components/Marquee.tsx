@@ -14,6 +14,8 @@ const Marquee = ({ children, speed = 30 }: MarqueeProps) => {
       className="overflow-hidden"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
+      onTouchStart={() => setPaused(true)}
+      onTouchEnd={() => setPaused(false)}
     >
       <motion.div
         className="flex gap-6 w-max"

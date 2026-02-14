@@ -64,7 +64,7 @@ const ReededHero = () => (
     </motion.div>
 
     {/* Z-15: CTA overlay */}
-    <div className="absolute bottom-28 sm:bottom-32 left-1/2 -translate-x-1/2 z-[15] text-center">
+    <div className="absolute bottom-36 sm:bottom-32 left-1/2 -translate-x-1/2 z-[15] text-center">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -88,7 +88,7 @@ const ReededHero = () => (
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 1.5 }}
-      className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-[15]"
+      className="absolute bottom-24 sm:bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-[15] hidden sm:flex"
     >
       <span className="mono-label">Scroll Down</span>
       <div className="w-px h-8 bg-gradient-to-b from-[hsl(0_0%_100%/0.3)] to-transparent" />

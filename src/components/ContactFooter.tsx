@@ -47,7 +47,7 @@ const ContactFooter = () => (
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="glass w-12 h-12 rounded-full flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-[hsl(var(--glass-hover))] transition-all duration-300"
+              className="glass w-14 h-14 rounded-full flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-[hsl(var(--glass-hover))] transition-all duration-300"
             >
               <Icon size={20} />
             </a>
@@ -55,8 +55,8 @@ const ContactFooter = () => (
         </div>
       </ScrollReveal>
 
-      {/* Footer bottom */}
-      <div className="mt-20 pt-8 border-t border-[hsl(var(--border))]">
+      {/* Footer bottom — extra padding to clear dock nav */}
+      <div className="mt-20 pb-24 sm:pb-8 pt-8 border-t border-[hsl(var(--border))]">
         <p className="text-xs text-muted-foreground uppercase tracking-wider">
           © 2026 PARTH FITNESS. All rights reserved.
         </p>

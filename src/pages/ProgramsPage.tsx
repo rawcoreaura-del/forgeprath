@@ -84,36 +84,36 @@ const ProgramsPage = () => {
 
           <ScrollReveal delay={0.1}>
             <div className="glass glow-border rounded-2xl overflow-hidden">
-              <table className="w-full">
+              <table className="w-full text-sm sm:text-base">
                 <thead>
                   <tr className="border-b border-[hsl(var(--border))]">
-                    <th className="text-left p-5 font-heading uppercase tracking-wide text-sm">Feature</th>
-                    <th className="p-5 text-center font-heading uppercase tracking-wide text-sm">
+                    <th className="text-left p-3 sm:p-5 font-heading uppercase tracking-wide text-xs sm:text-sm">Feature</th>
+                    <th className="p-3 sm:p-5 text-center font-heading uppercase tracking-wide text-xs sm:text-sm">
                       Standard
-                      <span className="block text-2xl font-bold mt-1">₹2,999</span>
+                      <span className="block text-xl sm:text-2xl font-bold mt-1">₹2,999</span>
                     </th>
-                    <th className="p-5 text-center font-heading uppercase tracking-wide text-sm">
+                    <th className="p-3 sm:p-5 text-center font-heading uppercase tracking-wide text-xs sm:text-sm">
                       Pro
-                      <span className="block text-2xl font-bold mt-1">₹5,999</span>
+                      <span className="block text-xl sm:text-2xl font-bold mt-1">₹5,999</span>
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   {comparisonRows.map((row) => (
                     <tr key={row.feature} className="border-b border-[hsl(var(--border))] last:border-0">
-                      <td className="p-5 text-muted-foreground">{row.feature}</td>
-                      <td className="p-5 text-center">
+                      <td className="p-3 sm:p-5 text-muted-foreground">{row.feature}</td>
+                      <td className="p-3 sm:p-5 text-center">
                         {row.standard ? (
-                          <Check size={20} className="mx-auto text-foreground/70" />
+                          <Check size={18} className="mx-auto text-foreground/70" />
                         ) : (
-                          <X size={20} className="mx-auto text-muted-foreground/30" />
+                          <X size={18} className="mx-auto text-muted-foreground/30" />
                         )}
                       </td>
-                      <td className="p-5 text-center">
+                      <td className="p-3 sm:p-5 text-center">
                         {row.pro ? (
-                          <Check size={20} className="mx-auto text-foreground/70" />
+                          <Check size={18} className="mx-auto text-foreground/70" />
                         ) : (
-                          <X size={20} className="mx-auto text-muted-foreground/30" />
+                          <X size={18} className="mx-auto text-muted-foreground/30" />
                         )}
                       </td>
                     </tr>
