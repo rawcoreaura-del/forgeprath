@@ -27,7 +27,7 @@ const DockNav = () => {
       initial={{ y: 100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.5, type: "spring", stiffness: 100, damping: 20 }}
-      className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-3 sm:px-4 py-2.5 sm:py-3 rounded-[2rem] flex items-end gap-0.5 sm:gap-1 backdrop-blur-[60px] border border-[hsl(var(--glass-border))]"
+      className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-auto max-w-[90vw] px-3 sm:px-4 py-2.5 sm:py-3 rounded-[2rem] flex items-end justify-center gap-0.5 sm:gap-1 backdrop-blur-[60px] border border-[hsl(var(--glass-border))]"
       style={{
         background: "hsl(var(--glass-bg))",
         boxShadow: "0 8px 32px hsl(0 0% 0% / 0.15), inset 0 1px 0 0 hsl(0 0% 100% / 0.08)",
